@@ -8,12 +8,6 @@ var map = L.mapbox.map('map', 'mapbox.streets')
 
 /* END LEAFLET MAP SETUP */
 
-//get number function
-//parse string function
-function getNumber(str){
-  return (isNaN(parseFloat(str))) ? 0 : parseFloat(str);
-}
-
 
 var colVals = [4000,6000,8000,10000,12000,14000,18000,24000,30000,60000];
 console.log("Here is an array of column values from the coefficient lookup table");
@@ -91,7 +85,7 @@ function getData(){
             coeffVal = coeffData[refRow].land_bin10;
         }
 
-        parcelData.features[i].properties.coeff = getNumber(coeffVal);
+        parcelData.features[i].properties.coeff = Number(coeffVal);
 
       }
       console.log("next we get row values based on conditions: if living area is between two numbers, assign that i value to variable refRow.");
@@ -109,23 +103,13 @@ function getData(){
 getData();
 
 
-
-
-/*
-
-for(i=0;i<parcels.length;i++){
-  console.log("inside first for loop");
-  landArea = parcels.features[i].properties.land_sqft;
-  livingArea = parcels.features[i].properties.living_are;
-  grassArea = landArea - livingArea;
-  console.log(grassArea);
-  parcels.features[i].properties.grass_area =  parcels.features[i].properties.land_sqft - parcels.features[i].properties.living_are;
-
-}
+/*  NOW WE NEED TO DO SOME MATH
+     Q = (Kc*ET - P)*A*0.62
+     Kc = coeff attribute in parcelData
+     ET is evapotranspiration
+     P = Precipitation
 
 */
-
-
 
 
 
