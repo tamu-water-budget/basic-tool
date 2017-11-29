@@ -6,6 +6,20 @@ L.mapbox.accessToken = 'pk.eyJ1Ijoia2hpZ2dpbnMxMTUiLCJhIjoiY2ltcW9pZXZkMDBua3Zsb
 var map = L.mapbox.map('map', 'mapbox.streets')
     .setView([30.62,-96.34], 14);
 
+/*
+var geocodeControl = L.mapbox.geocoderControl('mapbox.places');
+geocodeControl.addTo(map);
+console.log("Here's the geocodeControl!");
+
+var resultOne = geocodeControl.setTileJSON(tilejson);
+console.log("look HERE is " + resultOne);
+
+*/
+map.addControl(L.mapbox.geocoderControl('mapbox.places', {
+  autocomplete: true
+}));
+
+
 /* END LEAFLET MAP SETUP */
 
 
