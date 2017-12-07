@@ -19,13 +19,20 @@
   </div><!-- END NAVBAR -->
 
   <!-- MAP -->
-  <div id='map'></div>
+  <div id='map'>
+    <div id="popup" class="ol-popup">
+        <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+        <div id="popup-content"></div>
+    </div>
+  </div>
   <!-- END MAP -->
   <!-- LOAD SCRIPTS -->
   <script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
+  <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v1.3.0/turf.min.js'></script>
   <script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
   <script src="https://d3js.org/d3.v4.js"></script>
   <script src="//d3js.org/queue.v1.min.js"></script>
+  <script src='js/responsive.js'></script>
   <script src='js/site.js'></script>
 </body>
 <!-- END BODY -->
