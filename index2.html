@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Basic Water Budget Tool</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <!-- CSS -->
+    <link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link href='css/main.css' rel='stylesheet'  />
+</head>
+<!-- BODY -->
+<body>
+  <!-- NAVBAR -->
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Basic Water Budget Tool</a>
+    </div>
+  </div><!-- END NAVBAR -->
+    <div class="container-fluid">
+  	<div class="row">
+  		<div class="col-md-4">
+  			<h3>
+  				BASIC
+  				<div>
+  					WATER BUDGET TOOLSET
+  				</div>
+  			</h3>
+
+  			<p class="MsoNormal">
+  				Step 2. The Results
+  			</p>
+  			<p class="MsoNormal">
+  				Estimate water need for your landscape
+  			</p>
+  			<p class="MsoNormal">
+  				for the month of [MONTH] in [YEAR]
+  			</p>
+
+  			<div class="row">
+  				<div class="col-md-6">
+  					<p>
+  					Estimated irrigable area for your property:
+  					</p>
+  				</div>
+  				<div class="col-md-6">
+  				</div>
+  			</div>
+  			<p>[CLICK HERE] to learn about how you can maintain a healthy lawn and AND save water!
+  			</p>
+  		</div>
+  		<div class="col-md-8">
+  		</div>
+  	</div>
+  </div>
+
+
+  <!-- MAP -->
+  <div id='map'>
+    <div id="popup" class="ol-popup">
+        <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+        <div id="popup-content"></div>
+    </div>
+  </div>
+  <!-- END MAP -->
+  <!-- LOAD SCRIPTS -->
+  <script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
+  <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v1.3.0/turf.min.js'></script>
+  <script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="//d3js.org/queue.v1.min.js"></script>
+  <script src='js/responsive.js'></script>
+  <script src='js/site.js'></script>
+</body>
+<!-- END BODY -->
+</html>
